@@ -8,7 +8,7 @@
     //<--- links rotos --->
     const statsBrokenLinks = (links) => {
     const brokenLinks = links.filter(
-        (element) => element.Menssage === "FAIL"
+        (element) => element.Message === "FAIL"
     ).length;
     return brokenLinks;
     };

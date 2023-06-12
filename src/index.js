@@ -18,7 +18,7 @@
                     Text: link.Text,
                     File: link.File,
                     Status: infoStatus.status,
-                    Menssage: infoStatus.status <= 399 ? "OK" : "FAIL",
+                    Message: infoStatus.status <= 399 ? "OK" : "FAIL",
                 };
                 return validate;
                 })

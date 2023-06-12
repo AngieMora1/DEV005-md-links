@@ -1,6 +1,6 @@
 {
-  "name": "am1-mdlinks",
-  "version": "0.1.0",
+  "name": "am-mdlinks",
+  "version": "1.0.0",
   "description": "libreria que permite el analisis de archivos en formato Markdown, para verificar los links que contengan y reportar algunas estadísticas.",
   "author": "Angie Mora",
   "bin": {
