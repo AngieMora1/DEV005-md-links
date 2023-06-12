@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const { mdLinks } = require("./index");
 const { statsLinks } = require("./stats");
 

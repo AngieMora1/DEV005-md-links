@@ -1,5 +1,5 @@
 const fs = require("fs");
-const path = require("path");
+const path = require("path")
 
 // <--- validar que la ruta sea valida(exista) y absoluta --->
 const validateExistsPath = (route) => {
@@ -7,8 +7,8 @@ const validateExistsPath = (route) => {
     // console.log("Ruta valida y absoluta funcion");
     const pathAbsolute = path.resolve(route);
     return pathAbsolute;
-}
-}
+  }
+};
 
 // <--- validar si es archivo y recursividad (recorrer directorio y extraer los archivos .md) --->
 const getFiles = (routes) => {
@@ -36,16 +36,16 @@ const readFileContent = (file) => {
   return new Promise((resolve, reject) => {
     fs.readFile(file, "utf8", (err, data) => {
       if (err) {
-        console.log("no se encontro links", err);
-        reject(err);
+        reject("No se encontro archivos");
       } else {
-        const expressionHref = /\[(.+)\]\(([^ ]+)( "(.+)")?\)/gim;
+        const expressionHref =
+          /\[([^[]+)\]\(https?:[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|]\)/gim;
         const linkMatch = data.match(expressionHref);
         const arrayLinks = linkMatch.map((link) => {
           const separateText = link.split("](");
           const href = separateText[1].replace(")", "");
           const text = separateText[0].replace("[", "");
-          return { Href:href, Text:text, File:file };
+          return { Href: href, Text: text, File: file };
         });
         resolve(arrayLinks);
       }
