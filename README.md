@@ -93,7 +93,7 @@ Ejemplo:
 ![md-links validate: {true} && stats](./Img/validate(True)%26%26stats.png)
 ***
 #### CONSIDERACIONES
- * Si se ejecuta md-links en la 'powershell' se debe de agregar '.cmd' al final (md-links.cdm) de lo contrario si se ejecuta en el 'bash' basta con solo escribir md-links.
+ * Si se ejecuta md-links en la 'powershell' se debe de agregar '.cmd' al final (md-links.cdm) de lo contrario si se ejecuta en el 'bash' solo hay que escribir md-links.
 _________________________________________________________
 
 ## 4. Diagrama de flujo
